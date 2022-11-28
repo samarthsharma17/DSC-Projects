@@ -11,8 +11,6 @@ View(iris)
 
 mydata = select(iris,c(1,2,3,4))
 
-wssplot(mydata)
-
 KM = kmeans(mydata,2)
 
 autoplot(KM,mydata,frame=TRUE)
@@ -30,3 +28,5 @@ wssplot <- function(data, nc=15, seed=1234)
   
   plot(1:nc, wss, type="b", xlab="Number of Clusters", ylab="Within groups sum of squares")
 }
+
+wssplot(mydata)
